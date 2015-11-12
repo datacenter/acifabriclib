@@ -40,6 +40,57 @@ Installation
    it in your code using "from acifabriclib import *" at the beginning of your
    source code file.
 
+
+Using the Library
+=================
+
+- Create the main skeleton for the code
+
+```
+    from acifabriclib import *
+
+    # Start of the execution
+    if __name__ == "__main__":
+
+        print("Starting the app")
+        # Insert your code here
+```
+
+
+- Instance a Fabric object and create an authenticated session with the fabric
+
+```
+        # Instance a new Fabric object
+        f = fabriclib.Fabric("https://10.49.0.100", "admin", "pwd9999!")
+
+        # Connect and authenticate
+        f.connect()
+```
+
+
+- Now create a new object, for example, a VPC interface.
+
+```
+        iface = VPC("VPC-Towards-Cat6509")
+```
+
+- Set up it's properties
+```
+        # Specify which interfaces belong to it
+        iface.add_port(101, 1, 37)
+        iface.add_port(102, 1, 53)
+```
+
+- Make changes effective on the fabric
+
+```
+    # Push the changes to the fabric
+    f.push_to_apic(iface)
+```
+
+- Have a look at the fabric. There should be a complete set of policies that
+create the VPC (switch profiles, interface policy group, interface profile, etc)
+
 Author
 ======
 Luis Martin, CITT EMEAR, Cisco Advanced Services (lumarti2@cisco.com)

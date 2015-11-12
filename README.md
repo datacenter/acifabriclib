@@ -85,8 +85,8 @@ Using the Library
 - Make changes effective on the fabric
 
 ```
-    # Push the changes to the fabric
-    f.push_to_apic(iface)
+        # Push the changes to the fabric
+        f.push_to_apic(iface)
 ```
 
 - Have a look at the fabric. There should be a complete set of policies that

@@ -92,8 +92,30 @@ Using the Library
 - Have a look at the fabric. There should be a complete set of policies that
 create the VPC (switch profiles, interface policy group, interface profile, etc)
 
+- Similar steps can be followed for the rest of classes offered by the library.
+  Here are some examples:
+
+```
+        # Create a VLAN Pool
+        v = fabriclib.VLANPool("Server-VLANs")
+        v.add_range(100,399)
+        v.add_range(500,550)
+        f.push_to_apic(v)
+
+        # Create a VXLAN Pool
+        v = fabriclib.VXLANPool("Ext-VXLAns")
+        v.add_range(30000,30100)
+        f.push_to_apic(v)
+
+        # Create a Multicast Address Pool
+        v = fabriclib.MulticastPool("Ext-Multicast")
+        v.add_range("224.0.0.0", "224.0.0.255")
+        v.add_range("224.1.0.0", "224.3.255.255")
+        f.push_to_apic(v)
+```
+
 Author
 ======
 Luis Martin, CITT EMEAR, Cisco Advanced Services (lumarti2@cisco.com)
-
+http://bock-bock.cisco.com/~lumarti2/
                                             

@@ -22,20 +22,19 @@ Installation
 ============
 
 1. Download the source code
-  - Cloning the repository directly
-    - $ git clone https://engci-gitlab-gpk.cisco.com/lumarti2/acifabriclib.git
-  - Downlading it as a ZIP file and decompressing it
-    - Linux/Mac
-      - $ wget http://engci-gitlab-gpk.cisco.com/lumarti2/acifabriclib/repository/archive.zip --no-check-certificate
-      - $ unzip archive.zip
-    - Windows
-       - Just get the file with an Internet browser and decompress it.
-         - http://engci-gitlab-gpk.cisco.com/lumarti2/acifabriclib/repository/archive.zip
+    - **Option A**: Cloning the repository directly
+        - $ git clone https://engci-gitlab-gpk.cisco.com/lumarti2/acifabriclib.git
+    - **Option B**: Downlading it as a ZIP file and decompressing it
+        - Linux/Mac:
+            - $ wget http://engci-gitlab-gpk.cisco.com/lumarti2/acifabriclib/repository/archive.zip --no-check-certificate
+            - $ unzip archive.zip
+        - Windows:
+            - Download the file with an Internet browser and decompress it to your local hard drive.
+                - http://engci-gitlab-gpk.cisco.com/lumarti2/acifabriclib/repository/archive.zip
 2. Install the library
-  - Open a command-line console
-  - Go to the directory where the source code was uncompressed (the one where
-    the setup.py file is) and run: 
-    - $ python3 setup.py install
+    - Open a command-line console
+    - Go to the directory where the source code was uncompressed (the one where the setup.py file is) and run: 
+        - $ python3 setup.py install
 
 3. Now you can start creating your scripts using the library. Just import
    it in your code using "from acifabriclib import *" at the beginning of your
